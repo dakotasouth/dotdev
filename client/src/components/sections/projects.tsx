@@ -2,16 +2,18 @@ import { MotionDiv, MotionHeading, scaleIn, stagger } from "../ui/motion";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "Modern online shopping experience",
+    title: "BackJox",
+    description: "A collection of multiplayer games",
     image: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8",
-    tags: ["React", "Node.js", "MongoDB"]
+    tags: ["React", "Node.js"],
+    url: "https://backjox.com"
   },
   {
-    title: "Analytics Dashboard",
-    description: "Data visualization platform",
+    title: "Weaver Solver",
+    description: "A solution to the popular weaver game",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
-    tags: ["TypeScript", "D3.js", "API"]
+    tags: ["TypeScript", "Next.js"],
+    url: "https://weaver-solver.tech"
   },
   {
     title: "Social Media App",
@@ -63,6 +65,7 @@ export default function Projects() {
               className="group cursor-pointer"
               variants={scaleIn}
               whileHover={{ y: -5 }}
+              onClick={() => project.url && window.open(project.url, '_blank')}
             >
               <div className="relative overflow-hidden rounded-lg aspect-video">
                 <img

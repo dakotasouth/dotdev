@@ -24,10 +24,10 @@ const TypewriterText = ({ text }: { text: string }) => {
 
 export default function Hero() {
   const sections = [
-    { name: "README.md", path: "#" },
-    { name: "about.txt", path: "#about" },
-    { name: "projects.json", path: "#projects" },
-    { name: "contact.md", path: "#contact" }
+    { name: "./README.md", path: "#" },
+    { name: "./about.txt", path: "#about" },
+    { name: "./projects.json", path: "#projects" },
+    { name: "./contact.md", path: "#contact" }
   ];
 
   return (
@@ -65,11 +65,9 @@ export default function Hero() {
                 <span className="text-[#ECDFCC]/70">$</span>
                 <a 
                   href={section.path}
-                  className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 
-                           hover:bg-[#ECDFCC]/20 transition-colors px-6 py-2 
-                           text-[#ECDFCC] font-mono w-48"
+                  className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-6 py-2 text-[#ECDFCC] font-mono w-48"
                 >
-                  cat {section.name}
+                  {section.name}
                 </a>
               </div>
             ))}

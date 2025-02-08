@@ -43,11 +43,11 @@ export default function Projects() {
               whileHover={{ y: -5 }}
               onClick={() => project.url && window.open(project.url, '_blank')}
             >
-              <div className="relative overflow-hidden rounded-lg aspect-video">
+              <div className="relative h-48 rounded-lg">
                 <div 
-                  className={`w-full h-full ${project.background}`}
+                  className={`absolute inset-0 ${project.background} rounded-lg`}
                 />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
                   <div className="h-full flex flex-col justify-end p-6">
                     <h3 className="font-['Playfair_Display'] text-xl font-bold mb-2">
                       {project.title}

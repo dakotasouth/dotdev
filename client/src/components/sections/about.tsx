@@ -33,11 +33,9 @@ export default function About() {
               className="font-['Raleway'] text-lg leading-relaxed"
               variants={fadeIn}
             >
-              I'm a passionate software engineer specializing in building
-              scalable, data-driven applications. With expertise in cloud
-              infrastructure and real-time systems, I create robust solutions
-              that handle complex data processing needs while maintaining high
-              performance.
+              I'm a passionate software engineer learning how to build the future. 
+              With expertise in web applications, cloud infrastructure, and data engineering,
+              I'm driven to build innovative solutions that make a positive impact.
             </MotionParagraph>
 
             <MotionDiv variants={fadeIn} className="flex flex-col space-y-4">

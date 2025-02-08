@@ -41,7 +41,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 md:px-8 lg:px-16">
+    <section id="projects" className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16">
       <MotionDiv
         className="max-w-6xl mx-auto"
         initial="initial"

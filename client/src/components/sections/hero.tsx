@@ -5,17 +5,19 @@ const TypewriterText = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {
+    setDisplayText(""); // Reset text when prop changes
     let i = 0;
     const timer = setInterval(() => {
       if (i < text.length) {
-        setDisplayText(prev => prev + text.charAt(i));
+        setDisplayText((prev) => prev + text[i]);
         i++;
       } else {
         clearInterval(timer);
       }
     }, 100);
-    return () => clearInterval(timer);
-  }, [text]);
+
+    return () => clearInterval(timer); // Cleanup
+  }, [text]); // Re-run when text prop changes
 
   return <span>{displayText}<span className="animate-pulse">_</span></span>;
 };
@@ -26,7 +28,7 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="flex items-center space-x-2 text-[#ECDFCC] mb-4">
           <span className="text-2xl">$</span>
-          <TypewriterText text="whoami" />
+          <TypewriterText key="whoami" text="whoami" />
         </div>
 
         <MotionDiv

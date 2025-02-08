@@ -37,11 +37,13 @@ export default function Hero() {
         >
           <h1 className="text-4xl md:text-6xl font-bold font-mono">
             <span className="text-[#ECDFCC]">&gt; </span>
-            Full Stack Developer
+            Dakota South
           </h1>
 
           <p className="text-lg text-[#ECDFCC]/70 font-mono">
             {`{`}<br/>
+            &nbsp;&nbsp;"name": "Dakota South",<br/>
+            &nbsp;&nbsp;"role": "Full Stack Developer",<br/>
             &nbsp;&nbsp;"skills": ["web_dev", "systems", "automation"],<br/>
             &nbsp;&nbsp;"status": "building_cool_stuff",<br/>
             &nbsp;&nbsp;"location": "localhost"<br/>

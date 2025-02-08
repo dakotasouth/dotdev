@@ -34,7 +34,7 @@ export default function Projects() {
           Featured Projects
         </MotionHeading>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
           {projects.map((project, index) => (
             <MotionDiv
               key={index}
@@ -43,7 +43,7 @@ export default function Projects() {
               whileHover={{ y: -5 }}
               onClick={() => project.url && window.open(project.url, '_blank')}
             >
-              <div className="relative h-56 rounded-lg">
+              <div className="relative h-64 w-64 rounded-lg">
                 <div 
                   className={`absolute inset-0 ${project.background} rounded-lg`}
                 />
@@ -55,7 +55,7 @@ export default function Projects() {
                     <p className="font-['Raleway'] text-sm text-[#ECDFCC]/80 mb-4">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex gap-2">
                       {project.tags.map((tag, i) => (
                         <span
                           key={i}

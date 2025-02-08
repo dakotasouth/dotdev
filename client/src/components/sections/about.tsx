@@ -62,18 +62,28 @@ export default function About() {
 
           <div className="space-y-6">
             <MotionDiv 
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4"
               variants={fadeIn}
             >
               <div>
                 <h3 className="font-['Playfair_Display'] font-bold mb-2">Technical Skills</h3>
                 <ul className="font-['Raleway'] space-y-2 text-[#697565]">
-                  <li>AWS Cloud Infrastructure</li>
-                  <li>Data Engineering & Pipelines</li>
-                  <li>Backend Development</li>
-                  <li>Real-time WebSocket Systems</li>
-                  <li>Database Architecture</li>
-                  <li>Job Automation (Quartz)</li>
+                  <li>AWS</li>
+                  <li>.NET</li>
+                  <li>Node.js</li>
+                  <li>React</li>
+                  <li>Next.js</li>
+                  <li>MySQL</li>
+                  <li>PostgreSQL</li>
+                  <li>OpenSearch</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-['Playfair_Display'] font-bold mb-2">Languages</h3>
+                <ul className="font-['Raleway'] space-y-2 text-[#697565]">
+                  <li>C#</li>
+                  <li>Python</li>
+                  <li>TypeScript</li>
                 </ul>
               </div>
               <div>

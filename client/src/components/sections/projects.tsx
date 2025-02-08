@@ -43,7 +43,7 @@ export default function Projects() {
               whileHover={{ y: -5 }}
               onClick={() => project.url && window.open(project.url, '_blank')}
             >
-              <div className="relative h-48 rounded-lg">
+              <div className="relative h-56 rounded-lg">
                 <div 
                   className={`absolute inset-0 ${project.background} rounded-lg`}
                 />

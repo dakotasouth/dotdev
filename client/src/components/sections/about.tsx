@@ -31,9 +31,9 @@ export default function About() {
               className="font-['Raleway'] text-lg leading-relaxed"
               variants={fadeIn}
             >
-              I'm a passionate developer with expertise in creating engaging digital experiences. 
-              With a strong foundation in both design and development, I bridge the gap between 
-              aesthetics and functionality.
+              I'm a passionate software engineer specializing in building scalable, data-driven applications. 
+              With expertise in cloud infrastructure and real-time systems, I create robust solutions that 
+              handle complex data processing needs while maintaining high performance.
             </MotionParagraph>
 
             <MotionDiv 
@@ -41,20 +41,23 @@ export default function About() {
               variants={fadeIn}
             >
               <div>
-                <h3 className="font-['Playfair_Display'] font-bold mb-2">Skills</h3>
+                <h3 className="font-['Playfair_Display'] font-bold mb-2">Technical Skills</h3>
                 <ul className="font-['Raleway'] space-y-2 text-[#697565]">
-                  <li>React / Next.js</li>
-                  <li>TypeScript</li>
-                  <li>Node.js</li>
-                  <li>UI/UX Design</li>
+                  <li>AWS Cloud Infrastructure</li>
+                  <li>Data Engineering & Pipelines</li>
+                  <li>Backend Development</li>
+                  <li>Real-time WebSocket Systems</li>
+                  <li>Database Architecture</li>
+                  <li>Job Automation (Quartz)</li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-['Playfair_Display'] font-bold mb-2">Experience</h3>
                 <ul className="font-['Raleway'] space-y-2 text-[#697565]">
-                  <li>5+ Years Development</li>
-                  <li>50+ Projects</li>
-                  <li>20+ Happy Clients</li>
+                  <li>Complex Data Processing</li>
+                  <li>Metric Calculations</li>
+                  <li>Large-scale Systems</li>
+                  <li>Web Applications</li>
                 </ul>
               </div>
             </MotionDiv>

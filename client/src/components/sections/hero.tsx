@@ -50,10 +50,9 @@ export default function Hero() {
 
           <p className="text-lg text-[#ECDFCC]/70 font-mono">
             {`{`}<br/>
-            &nbsp;&nbsp;"name": "Dakota South",<br/>
-            &nbsp;&nbsp;"role": "Full Stack Developer",<br/>
+            &nbsp;&nbsp;"role": "Software Engineer",<br/>
             &nbsp;&nbsp;"skills": ["web_dev", "systems", "automation"],<br/>
-            &nbsp;&nbsp;"status": "building_cool_stuff",<br/>
+            &nbsp;&nbsp;"status": "building/accelerating",<br/>
             &nbsp;&nbsp;"location": "localhost"<br/>
             {`}`}
           </p>

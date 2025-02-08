@@ -1,9 +1,18 @@
-import { MotionDiv, MotionHeading, MotionParagraph, fadeIn, stagger } from "../ui/motion";
-import { Twitter, Github, Linkedin } from "lucide-react";
+import {
+  MotionDiv,
+  MotionHeading,
+  MotionParagraph,
+  fadeIn,
+  stagger,
+} from "../ui/motion";
+import { TwitterIcon, GithubIcon, LinkedinIcon } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16 bg-[#3C3D37]">
+    <section
+      id="about"
+      className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16 bg-[#3C3D37]"
+    >
       <MotionDiv
         className="max-w-6xl mx-auto"
         initial="initial"
@@ -20,26 +29,25 @@ export default function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <MotionParagraph 
+            <MotionParagraph
               className="font-['Raleway'] text-lg leading-relaxed"
               variants={fadeIn}
             >
-              I'm a passionate software engineer specializing in building scalable, data-driven applications. 
-              With expertise in cloud infrastructure and real-time systems, I create robust solutions that 
-              handle complex data processing needs while maintaining high performance.
+              I'm a passionate software engineer specializing in building
+              scalable, data-driven applications. With expertise in cloud
+              infrastructure and real-time systems, I create robust solutions
+              that handle complex data processing needs while maintaining high
+              performance.
             </MotionParagraph>
 
-            <MotionDiv 
-              variants={fadeIn}
-              className="flex gap-6"
-            >
+            <MotionDiv variants={fadeIn} className="flex gap-6">
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
               >
-                <Twitter className="w-6 h-6" />
+                <TwitterIcon className="w-6 h-6" />
               </a>
               <a
                 href="https://linkedin.com"
@@ -47,7 +55,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
               >
-                <Linkedin className="w-6 h-6" />
+                <LinkedinIcon className="w-6 h-6" />
               </a>
               <a
                 href="https://github.com"
@@ -55,18 +63,20 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
               >
-                <Github className="w-6 h-6" />
+                <GithubIcon className="w-6 h-6" />
               </a>
             </MotionDiv>
           </div>
 
           <div className="space-y-6">
-            <MotionDiv 
+            <MotionDiv
               className="grid grid-cols-1 sm:grid-cols-3 gap-4"
               variants={fadeIn}
             >
               <div>
-                <h3 className="font-['Playfair_Display'] font-bold mb-2">Technical Skills</h3>
+                <h3 className="font-['Playfair_Display'] font-bold mb-2">
+                  Technical Skills
+                </h3>
                 <ul className="font-['Raleway'] space-y-2 text-[#697565]">
                   <li>AWS</li>
                   <li>.NET</li>
@@ -79,7 +89,9 @@ export default function About() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-['Playfair_Display'] font-bold mb-2">Languages</h3>
+                <h3 className="font-['Playfair_Display'] font-bold mb-2">
+                  Languages
+                </h3>
                 <ul className="font-['Raleway'] space-y-2 text-[#697565]">
                   <li>C#</li>
                   <li>Python</li>
@@ -87,12 +99,14 @@ export default function About() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-['Playfair_Display'] font-bold mb-2">Experience</h3>
+                <h3 className="font-['Playfair_Display'] font-bold mb-2">
+                  Experience
+                </h3>
                 <ul className="font-['Raleway'] space-y-2 text-[#697565]">
-                  <li>Complex Data Processing</li>
-                  <li>Metric Calculations</li>
-                  <li>Large-scale Systems</li>
+                  <li>Data Pipelines</li>
+                  <li>Jobs/Automations</li>
                   <li>Web Applications</li>
+                  <li>Real-time Applications</li>
                 </ul>
               </div>
             </MotionDiv>

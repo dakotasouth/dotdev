@@ -10,7 +10,8 @@ const SECTIONS = {
   "/": "README.md",
   "/about": "about.txt",
   "/projects": "projects.json",
-  "/contact": "contact.md"
+  "/contact": "contact.md",
+  "/resume": "resume.pdf"
 };
 
 const SECTION_CONTENT = {
@@ -116,6 +117,7 @@ Available commands:
   ls              - List available files
   cd <section>    - Navigate to a section
   cat <file>      - Display file content
+  get resume.pdf  - Download resume
   clear           - Clear terminal
   pwd             - Show current location
   help            - Show this help message
@@ -170,6 +172,14 @@ Available commands:
         }
         break;
 
+      case "get":
+        if (args[1]?.toLowerCase() === "resume.pdf") {
+          window.location.href = '/api/resume';
+          output = "Downloading resume.pdf...";
+        } else {
+          output = "Usage: get resume.pdf";
+        }
+        break;
       case "clear":
         setCommands([]);
         return;

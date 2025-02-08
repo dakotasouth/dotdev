@@ -55,7 +55,7 @@ export default function Hero() {
           <p className="text-lg text-[#ECDFCC]/70 font-mono">
             {`{`}<br/>
             &nbsp;&nbsp;"role": "Software Engineer",<br/>
-            &nbsp;&nbsp;"skills": ["web_dev", "systems", "automation"],<br/>
+            &nbsp;&nbsp;"skills": ["cloud_infra", "data_engineering", "backend_dev", "realtime_systems"],<br/>
             &nbsp;&nbsp;"status": "building/accelerating",<br/>
             &nbsp;&nbsp;"location": "localhost"<br/>
             {`}`}

@@ -24,7 +24,6 @@ const TypewriterText = ({ text }: { text: string }) => {
 
 export default function Hero() {
   const sections = [
-    { name: "./README.md", path: "#" },
     { name: "./about.txt", path: "#about" },
     { name: "./projects.json", path: "#projects" },
     { name: "./contact.md", path: "#contact" }

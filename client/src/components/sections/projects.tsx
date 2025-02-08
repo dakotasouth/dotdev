@@ -4,46 +4,25 @@ const projects = [
   {
     title: "BackJox",
     description: "A collection of multiplayer games",
-    image: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8",
+    image: "/assets/code-terminal.png",
     tags: ["React", "Node.js"],
     url: "https://backjox.com"
   },
   {
     title: "Weaver Solver",
     description: "A solution to the popular weaver game",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
-    tags: ["TypeScript", "Next.js"],
+    image: "/assets/code-window.png",
+    tags: ["Blazor", "WASM"],
     url: "https://weaver-solver.tech"
-  },
-  {
-    title: "Social Media App",
-    description: "Connected communities platform",
-    image: "https://images.unsplash.com/photo-1510759395231-72b17d622279",
-    tags: ["React Native", "Firebase"]
-  },
-  {
-    title: "Portfolio Generator",
-    description: "Custom website builder",
-    image: "https://images.unsplash.com/photo-1660592868727-858d28c3ba52",
-    tags: ["Next.js", "Tailwind"]
-  },
-  {
-    title: "AI Assistant",
-    description: "Smart productivity tool",
-    image: "https://images.unsplash.com/photo-1685478237595-f452cb125f27",
-    tags: ["Python", "TensorFlow"]
-  },
-  {
-    title: "Crypto Tracker",
-    description: "Real-time market data",
-    image: "https://images.unsplash.com/photo-1679409759768-bea306439ab8",
-    tags: ["React", "WebSocket"]
   }
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16">
+    <section
+      id="projects"
+      className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16"
+    >
       <MotionDiv
         className="max-w-6xl mx-auto"
         initial="initial"
@@ -58,7 +37,7 @@ export default function Projects() {
           Featured Projects
         </MotionHeading>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <MotionDiv
               key={index}
@@ -67,7 +46,7 @@ export default function Projects() {
               whileHover={{ y: -5 }}
               onClick={() => project.url && window.open(project.url, '_blank')}
             >
-              <div className="relative overflow-hidden rounded-lg aspect-video">
+              <div className="relative overflow-hidden rounded-lg aspect-video bg-[#ECDFCC]/10">
                 <img
                   src={project.image}
                   alt={project.title}

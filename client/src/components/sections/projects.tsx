@@ -4,14 +4,12 @@ const projects = [
   {
     title: "BackJox",
     description: "A collection of multiplayer games",
-    image: "/assets/code-terminal.png",
     tags: ["React", "Node.js"],
     url: "https://backjox.com"
   },
   {
     title: "Weaver Solver",
     description: "A solution to the popular weaver game",
-    image: "/assets/code-window.png",
     tags: ["Blazor", "WASM"],
     url: "https://weaver-solver.tech"
   }
@@ -46,12 +44,11 @@ export default function Projects() {
               whileHover={{ y: -5 }}
               onClick={() => project.url && window.open(project.url, '_blank')}
             >
-              <div className="relative overflow-hidden rounded-lg aspect-video bg-[#ECDFCC]/10">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="object-cover w-full h-full transition-transform group-hover:scale-110"
-                />
+              <div className={`relative overflow-hidden rounded-lg aspect-video ${
+                index === 0 
+                  ? 'bg-gradient-to-b from-purple-500 to-indigo-700' 
+                  : 'bg-[#00800080]'
+              }`}>
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="h-full flex flex-col justify-end p-6">
                     <h3 className="font-['Playfair_Display'] text-xl font-bold mb-2">

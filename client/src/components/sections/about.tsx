@@ -1,4 +1,5 @@
 import { MotionDiv, MotionHeading, MotionParagraph, fadeIn, stagger } from "../ui/motion";
+import { Twitter, Github, Linkedin } from "lucide-react";
 
 export default function About() {
   return (
@@ -18,15 +19,7 @@ export default function About() {
         </MotionHeading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <MotionDiv variants={fadeIn}>
-            <img 
-              src="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18"
-              alt="Abstract texture"
-              className="rounded-lg w-full"
-            />
-          </MotionDiv>
-
-          <div className="space-y-6">
+          <div className="space-y-8">
             <MotionParagraph 
               className="font-['Raleway'] text-lg leading-relaxed"
               variants={fadeIn}
@@ -37,7 +30,39 @@ export default function About() {
             </MotionParagraph>
 
             <MotionDiv 
-              className="grid grid-cols-2 gap-4"
+              variants={fadeIn}
+              className="flex gap-6"
+            >
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
+              >
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
+              >
+                <Github className="w-6 h-6" />
+              </a>
+            </MotionDiv>
+          </div>
+
+          <div className="space-y-6">
+            <MotionDiv 
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
               variants={fadeIn}
             >
               <div>

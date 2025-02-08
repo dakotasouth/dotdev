@@ -7,14 +7,14 @@ interface Command {
 }
 
 const SECTIONS = {
-  "/": "home",
-  "/about": "about",
-  "/projects": "projects",
-  "/contact": "contact"
+  "/": "README.md",
+  "/about": "about.txt",
+  "/projects": "projects.json",
+  "/contact": "contact.md"
 };
 
 const SECTION_CONTENT = {
-  home: `
+  "README.md": `
     Dakota South
     ===========
     Full Stack Developer
@@ -27,7 +27,7 @@ const SECTION_CONTENT = {
       "location": "localhost"
     }
   `,
-  about: `
+  "about.txt": `
     About Me
     ========
     I'm a passionate developer with expertise in creating engaging digital experiences. 
@@ -45,35 +45,43 @@ const SECTION_CONTENT = {
     - 50+ Projects
     - 20+ Happy Clients
   `,
-  projects: `
-    Featured Projects
-    ================
-
-    1. E-commerce Platform
-       Modern online shopping experience
-       Tech: React, Node.js, MongoDB
-
-    2. Analytics Dashboard
-       Data visualization platform
-       Tech: TypeScript, D3.js, API
-
-    3. Social Media App
-       Connected communities platform
-       Tech: React Native, Firebase
-
-    4. Portfolio Generator
-       Custom website builder
-       Tech: Next.js, Tailwind
-
-    5. AI Assistant
-       Smart productivity tool
-       Tech: Python, TensorFlow
-
-    6. Crypto Tracker
-       Real-time market data
-       Tech: React, WebSocket
+  "projects.json": `
+    {
+      "featured_projects": [
+        {
+          "name": "E-commerce Platform",
+          "description": "Modern online shopping experience",
+          "tech": ["React", "Node.js", "MongoDB"]
+        },
+        {
+          "name": "Analytics Dashboard",
+          "description": "Data visualization platform",
+          "tech": ["TypeScript", "D3.js", "API"]
+        },
+        {
+          "name": "Social Media App",
+          "description": "Connected communities platform",
+          "tech": ["React Native", "Firebase"]
+        },
+        {
+          "name": "Portfolio Generator",
+          "description": "Custom website builder",
+          "tech": ["Next.js", "Tailwind"]
+        },
+        {
+          "name": "AI Assistant",
+          "description": "Smart productivity tool",
+          "tech": ["Python", "TensorFlow"]
+        },
+        {
+          "name": "Crypto Tracker",
+          "description": "Real-time market data",
+          "tech": ["React", "WebSocket"]
+        }
+      ]
+    }
   `,
-  contact: `
+  "contact.md": `
     Get in Touch
     ===========
     Let's work together! Feel free to reach out for collaborations or just a friendly hello.
@@ -105,11 +113,11 @@ export default function Terminal() {
       case "help":
         output = `
 Available commands:
-  ls              - List available sections
+  ls              - List available files
   cd <section>    - Navigate to a section
-  cat <section>   - Display section content
+  cat <file>      - Display file content
   clear           - Clear terminal
-  pwd             - Show current section
+  pwd             - Show current location
   help            - Show this help message
 `;
         break;
@@ -123,9 +131,9 @@ Available commands:
           output = "Usage: cd <section>";
           break;
         }
-        const section = args[1].toLowerCase();
+        const section = args[1].toLowerCase().replace(/\.(md|txt|json)$/, '');
         const path = Object.entries(SECTIONS).find(([, name]) => 
-          name === section
+          name.toLowerCase().startsWith(section)
         )?.[0];
 
         if (path) {
@@ -138,16 +146,20 @@ Available commands:
 
       case "cat":
         if (!args[1]) {
-          output = "Usage: cat <section>";
+          output = "Usage: cat <file>";
           break;
         }
-        const sectionName = args[1].toLowerCase();
-        const content = SECTION_CONTENT[sectionName as keyof typeof SECTION_CONTENT];
+        const fileName = args[1].toLowerCase();
+        const content = SECTION_CONTENT[
+          Object.values(SECTIONS).find(
+            (name) => name.toLowerCase() === fileName
+          ) as keyof typeof SECTION_CONTENT
+        ];
 
         if (content) {
           output = content;
         } else {
-          output = `Section '${sectionName}' not found`;
+          output = `File '${fileName}' not found`;
         }
         break;
 
@@ -158,7 +170,7 @@ Available commands:
       case "pwd":
         const currentSection = Object.entries(SECTIONS).find(([path]) => 
           path === window.location.pathname
-        )?.[1] || "home";
+        )?.[1] || "README.md";
         output = currentSection;
         break;
 

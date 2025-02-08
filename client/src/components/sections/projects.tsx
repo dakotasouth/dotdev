@@ -14,6 +14,13 @@ const projects = [
     background: "bg-[#00800080]",
     tags: ["TypeScript", "Next.js"],
     url: "https://weaver-solver.tech"
+  },
+  {
+    title: "Coming Soon",
+    description: "Work in Progress - New project under development",
+    background: "bg-gray-800/50",
+    tags: ["Under", "Development"],
+    url: ""
   }
 ];
 
@@ -34,7 +41,7 @@ export default function Projects() {
           Featured Projects
         </MotionHeading>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {projects.map((project, index) => (
             <MotionDiv
               key={index}

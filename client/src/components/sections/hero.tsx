@@ -23,6 +23,13 @@ const TypewriterText = ({ text }: { text: string }) => {
 };
 
 export default function Hero() {
+  const sections = [
+    { name: "README.md", path: "#" },
+    { name: "about.txt", path: "#about" },
+    { name: "projects.json", path: "#projects" },
+    { name: "contact.md", path: "#contact" }
+  ];
+
   return (
     <section className="min-h-screen relative flex items-center px-4">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -52,14 +59,20 @@ export default function Hero() {
             {`}`}
           </p>
 
-          <div className="pt-4">
-            <a 
-              href="#projects"
-              className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 
-                        transition-colors px-6 py-2 text-[#ECDFCC] font-mono"
-            >
-              ./view-projects
-            </a>
+          <div className="pt-4 space-y-3">
+            {sections.map((section, index) => (
+              <div key={index} className="flex items-center space-x-2">
+                <span className="text-[#ECDFCC]/70">$</span>
+                <a 
+                  href={section.path}
+                  className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 
+                           hover:bg-[#ECDFCC]/20 transition-colors px-6 py-2 
+                           text-[#ECDFCC] font-mono w-48"
+                >
+                  cat {section.name}
+                </a>
+              </div>
+            ))}
           </div>
         </MotionDiv>
       </div>

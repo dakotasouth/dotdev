@@ -40,36 +40,68 @@ export default function About() {
               performance.
             </MotionParagraph>
 
-            <MotionDiv variants={fadeIn} className="flex gap-6">
-              <a
-                href="https://x.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
-                aria-label="X (formerly Twitter)"
-              >
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon className="w-6 h-6" />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
-                aria-label="GitHub"
-              >
-                <GithubIcon className="w-6 h-6" />
-              </a>
+            <MotionDiv variants={fadeIn} className="flex flex-col space-y-4">
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://x.com/dakotasouth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
+                  aria-label="X (formerly Twitter)"
+                >
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+                <a
+                  href="https://x.com/dakotasouth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#ECDFCC] hover:text-[#ECDFCC]/70 transition-colors"
+                >
+                  @dakotasouth
+                </a>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://linkedin.com/in/dakotasouth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <LinkedinIcon className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://linkedin.com/in/dakotasouth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#ECDFCC] hover:text-[#ECDFCC]/70 transition-colors"
+                >
+                  /in/dakotasouth
+                </a>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://github.com/dakotasouth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
+                  aria-label="GitHub"
+                >
+                  <GithubIcon className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://github.com/dakotasouth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#ECDFCC] hover:text-[#ECDFCC]/70 transition-colors"
+                >
+                  /dakotasouth
+                </a>
+              </div>
             </MotionDiv>
           </div>
 

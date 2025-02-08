@@ -1,10 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about";
 import Projects from "@/components/sections/projects";
 import Contact from "@/components/sections/contact";
+import Terminal from "@/components/terminal/Terminal";
+import { Button } from "@/components/ui/button";
+import { Terminal as TerminalIcon, Monitor } from "lucide-react";
 
 export default function Home() {
+  const [isTerminalMode, setIsTerminalMode] = useState(false);
+
   useEffect(() => {
     // Load JetBrains Mono font
     const link = document.createElement("link");
@@ -14,12 +19,31 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-black text-[#ECDFCC] font-mono">
-      <div className="fixed inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CiAgPHBhdGggZD0iTTAgMGg2MHY2MEgweiIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQgPSJNMCAwaDJNMCAwdjIiIHN0cm9rZT0iIzAwZmYwMDEwIiBzdHJva2Utd2lkdGg9Ii41Ii8+Cjwvc3ZnPg==')] opacity-10" />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
+    <main className="min-h-screen bg-black text-[#ECDFCC] font-mono relative">
+      <Button
+        variant="outline"
+        size="icon"
+        className="fixed top-4 right-4 z-50 bg-black/50 backdrop-blur-sm border-[#00ff00] hover:bg-[#00ff00]/20"
+        onClick={() => setIsTerminalMode(!isTerminalMode)}
+      >
+        {isTerminalMode ? (
+          <Monitor className="h-4 w-4" />
+        ) : (
+          <TerminalIcon className="h-4 w-4" />
+        )}
+      </Button>
+
+      {isTerminalMode ? (
+        <Terminal />
+      ) : (
+        <>
+          <div className="fixed inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CiAgPHBhdGggZD0iTTAgMGg2MHY2MEgweiIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQgPSJNMCAwaDJNMCAwdjIiIHN0cm9rZT0iIzAwZmYwMDEwIiBzdHJva2Utd2lkdGg9Ii41Ii8+Cjwvc3ZnPg==')] opacity-10" />
+          <Hero />
+          <About />
+          <Projects />
+          <Contact />
+        </>
+      )}
     </main>
   );
 }

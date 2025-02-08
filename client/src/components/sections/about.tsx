@@ -2,7 +2,7 @@ import { MotionDiv, MotionHeading, MotionParagraph, fadeIn, stagger } from "../u
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4 md:px-8 lg:px-16 bg-[#3C3D37]">
+    <section id="about" className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16 bg-[#3C3D37]">
       <MotionDiv
         className="max-w-6xl mx-auto"
         initial="initial"

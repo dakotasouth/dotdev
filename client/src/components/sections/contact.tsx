@@ -29,7 +29,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-4 md:px-8 lg:px-16 bg-[#3C3D37]">
+    <section id="contact" className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16 bg-[#3C3D37]">
       <MotionDiv
         className="max-w-6xl mx-auto"
         initial="initial"
@@ -49,15 +49,15 @@ export default function Contact() {
             <p className="font-['Raleway'] text-lg">
               Let's work together! Feel free to reach out for collaborations or just a friendly hello.
             </p>
-            
+
             <div className="space-y-4">
-              <a 
+              <a
                 href="mailto:hello@example.com"
                 className="flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors"
               >
                 📧 hello@example.com
               </a>
-              <a 
+              <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,7 +65,7 @@ export default function Contact() {
               >
                 💼 LinkedIn
               </a>
-              <a 
+              <a
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,7 +114,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea 
+                        <Textarea
                           placeholder="Your message"
                           className="min-h-[120px]"
                           {...field}
@@ -125,7 +125,7 @@ export default function Contact() {
                   )}
                 />
 
-                <Button 
+                <Button
                   type="submit"
                   className="w-full bg-[#697565] hover:bg-[#181C14] transition-colors"
                 >

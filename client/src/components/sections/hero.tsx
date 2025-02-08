@@ -9,7 +9,7 @@ const TypewriterText = ({ text }: { text: string }) => {
     let i = 0;
     const timer = setInterval(() => {
       if (i < text.length) {
-        setDisplayText((prev) => prev + text[i]);
+        setDisplayText((prev) => prev + text.charAt(i));
         i++;
       } else {
         clearInterval(timer);

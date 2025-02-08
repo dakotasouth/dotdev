@@ -190,7 +190,7 @@ Available commands:
   };
 
   return (
-    <div className="min-h-screen bg-black text-[#00ff00] p-4 font-mono">
+    <div className="min-h-screen bg-black text-[#ECDFCC] p-4 font-mono">
       <div className="max-w-4xl mx-auto">
         <div className="mb-4">
           <p>Welcome to Dakota South's portfolio terminal.</p>
@@ -220,7 +220,7 @@ Available commands:
                 handleCommand(currentInput);
               }
             }}
-            className="ml-2 bg-transparent border-none outline-none flex-1 text-[#00ff00]"
+            className="ml-2 bg-transparent border-none outline-none flex-1 text-[#ECDFCC]"
             autoFocus
           />
         </div>

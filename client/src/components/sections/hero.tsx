@@ -29,6 +29,10 @@ export default function Hero() {
     { name: "./contact.md", path: "#contact" }
   ];
 
+  const handleResumeDownload = () => {
+    window.location.href = '/api/resume';
+  };
+
   return (
     <section className="min-h-screen relative flex items-center px-4">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -57,18 +61,31 @@ export default function Hero() {
             {`}`}
           </p>
 
-          <div className="pt-4 space-y-3">
-            {sections.map((section, index) => (
-              <div key={index} className="flex items-center space-x-2">
+          <div className="pt-4 grid grid-cols-2 gap-x-8">
+            <div className="space-y-3">
+              {sections.map((section, index) => (
+                <div key={index} className="flex items-center space-x-2">
+                  <span className="text-[#ECDFCC]/70">$</span>
+                  <a 
+                    href={section.path}
+                    className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-6 py-2 text-[#ECDFCC] font-mono w-48"
+                  >
+                    {section.name}
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-2">
                 <span className="text-[#ECDFCC]/70">$</span>
-                <a 
-                  href={section.path}
-                  className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-6 py-2 text-[#ECDFCC] font-mono w-48"
+                <button 
+                  onClick={handleResumeDownload}
+                  className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-6 py-2 text-[#ECDFCC] font-mono w-48 text-left"
                 >
-                  {section.name}
-                </a>
+                  ./resume.pdf
+                </button>
               </div>
-            ))}
+            </div>
           </div>
         </MotionDiv>
       </div>

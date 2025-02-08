@@ -131,16 +131,23 @@ Available commands:
           output = "Usage: cd <section>";
           break;
         }
-        const section = args[1].toLowerCase().replace(/\.(md|txt|json)$/, '');
+        const target = args[1].toLowerCase();
+
+        // Check if target is a file
+        if (target.includes('.')) {
+          output = `cd: not a directory: ${target}`;
+          break;
+        }
+
         const path = Object.entries(SECTIONS).find(([, name]) => 
-          name.toLowerCase().startsWith(section)
+          name.toLowerCase().replace(/\.(md|txt|json)$/, '') === target
         )?.[0];
 
         if (path) {
           setLocation(path);
-          output = `Navigating to ${section}...`;
+          output = `Navigating to ${target}...`;
         } else {
-          output = `Section '${section}' not found`;
+          output = `cd: no such directory: ${target}`;
         }
         break;
 

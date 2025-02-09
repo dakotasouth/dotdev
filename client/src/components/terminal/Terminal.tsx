@@ -200,27 +200,27 @@ Available commands:
   };
 
   return (
-    <div className="min-h-screen bg-black text-[#ECDFCC] p-4 font-mono">
+    <div className="min-h-screen bg-black text-[#ECDFCC] p-2 sm:p-4 font-mono">
       <div className="max-w-4xl mx-auto">
         <div className="mb-4">
-          <p>Welcome to Dakota South's portfolio terminal.</p>
-          <p>Type 'help' for available commands.</p>
+          <p className="text-sm sm:text-base">Welcome to Dakota South's portfolio terminal.</p>
+          <p className="text-sm sm:text-base">Type 'help' for available commands.</p>
         </div>
 
         {commands.map((cmd, i) => (
           <div key={i} className="mb-2">
             <div className="flex items-center">
-              <span className="text-[#ECDFCC]">$ </span>
-              <span className="ml-2">{cmd.command}</span>
+              <span className="text-[#ECDFCC] text-sm sm:text-base">$ </span>
+              <span className="ml-2 text-sm sm:text-base">{cmd.command}</span>
             </div>
             {cmd.output && (
-              <pre className="mt-1 whitespace-pre-wrap">{cmd.output}</pre>
+              <pre className="mt-1 whitespace-pre-wrap text-xs sm:text-sm overflow-x-auto">{cmd.output}</pre>
             )}
           </div>
         ))}
 
         <div className="flex items-center">
-          <span className="text-[#ECDFCC]">$ </span>
+          <span className="text-[#ECDFCC] text-sm sm:text-base">$ </span>
           <input
             type="text"
             value={currentInput}
@@ -230,7 +230,7 @@ Available commands:
                 handleCommand(currentInput);
               }
             }}
-            className="ml-2 bg-transparent border-none outline-none flex-1 text-[#ECDFCC]"
+            className="ml-2 bg-transparent border-none outline-none flex-1 text-[#ECDFCC] text-sm sm:text-base"
             autoFocus
           />
         </div>

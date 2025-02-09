@@ -6,27 +6,30 @@ const projects = [
     description: "A collection of multiplayer games",
     background: "bg-gradient-to-b from-purple-500 to-indigo-700",
     tags: ["React", "Node.js"],
-    url: "https://backjox.com"
+    url: "https://backjox.com",
   },
   {
     title: "Weaver Solver",
     description: "A solution to the popular weaver game",
     background: "bg-[#00800080]",
-    tags: ["TypeScript", "Next.js"],
-    url: "https://weaver-solver.tech"
+    tags: ["React", "Python"],
+    url: "https://weaver-solver.tech",
   },
   {
     title: "Coming Soon",
     description: "Work in Progress - New project under development",
     background: "bg-gray-800/50",
     tags: ["Under", "Development"],
-    url: ""
-  }
+    url: "",
+  },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16">
+    <section
+      id="projects"
+      className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16"
+    >
       <MotionDiv
         className="max-w-6xl mx-auto"
         initial="initial"
@@ -48,10 +51,10 @@ export default function Projects() {
               className="group cursor-pointer"
               variants={scaleIn}
               whileHover={{ y: -5 }}
-              onClick={() => project.url && window.open(project.url, '_blank')}
+              onClick={() => project.url && window.open(project.url, "_blank")}
             >
               <div className="relative h-64 w-64 rounded-lg">
-                <div 
+                <div
                   className={`absolute inset-0 ${project.background} rounded-lg`}
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">

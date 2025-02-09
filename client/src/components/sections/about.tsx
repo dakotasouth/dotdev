@@ -44,7 +44,7 @@ export default function About() {
                   href="https://x.com/dakotasouth"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
+                  className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors cursor-pointer"
                   aria-label="X (formerly Twitter)"
                 >
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -55,7 +55,7 @@ export default function About() {
                   href="https://x.com/dakotasouth"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#ECDFCC] hover:text-[#ECDFCC]/70 transition-colors"
+                  className="text-[#ECDFCC] hover:text-[#ECDFCC]/70 transition-colors cursor-pointer"
                 >
                   @dakotasouth
                 </a>
@@ -63,21 +63,21 @@ export default function About() {
 
               <div className="flex items-center gap-4">
                 <a
-                  href="https://linkedin.com/in/dakotasouth"
+                  href="https://linkedin.com/in/dakota-south/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
+                  className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors cursor-pointer"
                   aria-label="LinkedIn"
                 >
                   <LinkedinIcon className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/dakotasouth"
+                  href="https://linkedin.com/in/dakota-south/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#ECDFCC] hover:text-[#ECDFCC]/70 transition-colors"
+                  className="text-[#ECDFCC] hover:text-[#ECDFCC]/70 transition-colors cursor-pointer"
                 >
-                  /in/dakotasouth
+                  /in/dakota-south
                 </a>
               </div>
 
@@ -86,7 +86,7 @@ export default function About() {
                   href="https://github.com/dakotasouth"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
+                  className="p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors cursor-pointer"
                   aria-label="GitHub"
                 >
                   <GithubIcon className="w-6 h-6" />
@@ -95,7 +95,7 @@ export default function About() {
                   href="https://github.com/dakotasouth"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#ECDFCC] hover:text-[#ECDFCC]/70 transition-colors"
+                  className="text-[#ECDFCC] hover:text-[#ECDFCC]/70 transition-colors cursor-pointer"
                 >
                   /dakotasouth
                 </a>

@@ -1,7 +1,14 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -29,7 +36,10 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16 bg-[#3C3D37]">
+    <section
+      id="contact"
+      className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16 bg-[#3C3D37]"
+    >
       <MotionDiv
         className="max-w-6xl mx-auto"
         initial="initial"
@@ -41,35 +51,36 @@ export default function Contact() {
           className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-12"
           variants={fadeIn}
         >
-          Get in Touch
+          Reach Out!
         </MotionHeading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <MotionDiv variants={fadeIn} className="space-y-6">
             <p className="font-['Raleway'] text-lg">
-              Let's work together! Feel free to reach out for collaborations or just a friendly hello.
+              Let's work together! Feel free to reach out for collaborations or
+              just a friendly hello.
             </p>
 
             <div className="space-y-4">
               <a
-                href="mailto:hello@example.com"
-                className="flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors"
+                href="mailto:southd20@gmail.com"
+                className="flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors cursor-pointer"
               >
-                📧 hello@example.com
+                📧 southd20@gmail.com
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/dakota-south/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors"
+                className="flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors cursor-pointer"
               >
                 💼 LinkedIn
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/dakotasouth"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors"
+                className="flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors cursor-pointer"
               >
                 💻 GitHub
               </a>
@@ -78,7 +89,10 @@ export default function Contact() {
 
           <MotionDiv variants={fadeIn}>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+              >
                 <FormField
                   control={form.control}
                   name="name"

@@ -74,7 +74,7 @@ export default function Hero() {
                     href={section.path}
                     className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-2 sm:px-6 py-1.5 sm:py-2 text-[#ECDFCC] font-mono text-sm sm:text-base w-32 sm:w-48"
                   >
-                    {section.name}
+                    <span className="text-[#ECDFCC]">&gt; </span>{section.name}
                   </a>
                 </div>
               ))}

@@ -18,66 +18,68 @@ const SECTION_CONTENT = {
   "README.md": `
     Dakota South
     ===========
-    Full Stack Developer
+    Software Engineer
 
     {
-      "name": "Dakota South",
-      "role": "Full Stack Developer",
-      "skills": ["web_dev", "systems", "automation"],
-      "status": "building_cool_stuff",
+      "role": "Software Engineer",
+      "skills": ["cloud_infra", "data_engineering", "backend_dev", "realtime_systems"],
+      "status": "building/accelerating",
       "location": "localhost"
     }
   `,
   "about.txt": `
     About Me
     ========
-    I'm a passionate developer with expertise in creating engaging digital experiences. 
-    With a strong foundation in both design and development, I bridge the gap between 
-    aesthetics and functionality.
+    I'm a passionate software engineer learning how to build the future. 
+    With expertise in web applications, cloud infrastructure, and data engineering,
+    I'm driven to build innovative solutions that make a positive impact.
 
-    Skills:
-    - React / Next.js
-    - TypeScript
+    Technical Skills:
+    - AWS
+    - .NET
     - Node.js
-    - UI/UX Design
+    - React
+    - Next.js
+    - MySQL
+    - PostgreSQL
+    - OpenSearch
+
+    Languages:
+    - C#
+    - Python
+    - TypeScript
 
     Experience:
-    - 5+ Years Development
-    - 50+ Projects
-    - 20+ Happy Clients
+    - Data Pipelines
+    - Jobs/Automations
+    - Web Applications
+    - Real-time Applications
+
+    Find me at:
+    X (Twitter): @dakotasouth
+    LinkedIn: /in/dakota-south
+    GitHub: /dakotasouth
   `,
   "projects.json": `
     {
       "featured_projects": [
         {
-          "name": "E-commerce Platform",
-          "description": "Modern online shopping experience",
-          "tech": ["React", "Node.js", "MongoDB"]
+          "name": "BackJox",
+          "description": "A collection of multiplayer games",
+          "tech_stack": ["React", "Node.js"],
+          "url": "https://backjox.com"
         },
         {
-          "name": "Analytics Dashboard",
-          "description": "Data visualization platform",
-          "tech": ["TypeScript", "D3.js", "API"]
+          "name": "Weaver Solver",
+          "description": "A solution to the popular weaver game",
+          "tech_stack": ["React", "Python"],
+          "url": "https://weaver-solver.tech"
         },
         {
-          "name": "Social Media App",
-          "description": "Connected communities platform",
-          "tech": ["React Native", "Firebase"]
-        },
-        {
-          "name": "Portfolio Generator",
-          "description": "Custom website builder",
-          "tech": ["Next.js", "Tailwind"]
-        },
-        {
-          "name": "AI Assistant",
-          "description": "Smart productivity tool",
-          "tech": ["Python", "TensorFlow"]
-        },
-        {
-          "name": "Crypto Tracker",
-          "description": "Real-time market data",
-          "tech": ["React", "WebSocket"]
+          "name": "Coming Soon",
+          "description": "Work in Progress - New project under development",
+          "tech_stack": ["Under", "Development"],
+          "url": ""
         }
       ]
     }
@@ -88,9 +90,11 @@ const SECTION_CONTENT = {
     Let's work together! Feel free to reach out for collaborations or just a friendly hello.
 
     Contact Information:
-    - Email: hello@example.com
-    - LinkedIn: https://linkedin.com
-    - GitHub: https://github.com
+    - Email: southd20@gmail.com
+    - LinkedIn: https://linkedin.com/in/dakota-south
+    - GitHub: https://github.com/dakotasouth
+
+    You can also use the contact form on my website to send me a message directly.
   `
 };
 
@@ -191,6 +195,7 @@ Available commands:
           output = "Usage: get resume.pdf";
         }
         break;
+
       case "clear":
         setCommands([]);
         return;

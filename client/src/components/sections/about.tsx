@@ -124,7 +124,7 @@ export default function About() {
                     <li>Node.js</li>
                     <li>React</li>
                   </ul>
-                  <ul className="font-['Raleway'] space-y-2 text-[#697565]">
+                  <ul className="space-y-2 text-[#697565]">
                     <li>Next.js</li>
                     <li>MySQL</li>
                     <li>PostgreSQL</li>

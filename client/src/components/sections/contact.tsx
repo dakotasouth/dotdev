@@ -48,7 +48,7 @@ export default function Contact() {
         variants={stagger}
       >
         <MotionHeading
-          className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-12"
+          className="text-4xl md:text-5xl font-bold mb-12"
           variants={fadeIn}
         >
           Reach Out!

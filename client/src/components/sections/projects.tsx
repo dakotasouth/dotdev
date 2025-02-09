@@ -38,7 +38,7 @@ export default function Projects() {
         variants={stagger}
       >
         <MotionHeading
-          className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-12"
+          className="text-4xl md:text-5xl font-bold mb-12"
           variants={scaleIn}
         >
           <span className="text-[#ECDFCC]">&gt; </span>Featured Projects

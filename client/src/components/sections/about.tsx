@@ -21,7 +21,7 @@ export default function About() {
         variants={stagger}
       >
         <MotionHeading
-          className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-12"
+          className="text-4xl md:text-5xl font-bold mb-12"
           variants={fadeIn}
         >
           <span className="text-[#ECDFCC]">&gt; </span>About Me
@@ -30,7 +30,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <MotionParagraph
-              className="font-['Raleway'] text-lg leading-relaxed"
+              className="text-lg leading-relaxed"
               variants={fadeIn}
             >
               I'm a passionate software engineer learning how to build the

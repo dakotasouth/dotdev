@@ -38,10 +38,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16 bg-[#3C3D37]"
+      className="min-h-screen flex items-center py-20 px-4 md:px-8 lg:px-16 bg-[#3C3D37] relative"
     >
       <MotionDiv
-        className="max-w-6xl mx-auto"
+        className="max-w-6xl mx-auto w-full"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
@@ -55,7 +55,7 @@ export default function Contact() {
         </MotionHeading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <MotionDiv variants={fadeIn} className="space-y-6">
+          <MotionDiv variants={fadeIn} className="space-y-6 relative z-10">
             <p className="font-['Raleway'] text-lg">
               Let's work together! Feel free to reach out for collaborations or
               just a friendly hello.
@@ -64,26 +64,31 @@ export default function Contact() {
             <div className="space-y-4">
               <a
                 href="mailto:southd20@gmail.com"
-                className="flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors"
               >
-                📧 southd20@gmail.com
+                <span className="text-xl">📧</span>
+                <span>southd20@gmail.com</span>
               </a>
-              <a
-                href="https://www.linkedin.com/in/dakota-south/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors cursor-pointer"
-              >
-                💼 LinkedIn
-              </a>
-              <a
-                href="https://github.com/dakotasouth"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors cursor-pointer"
-              >
-                💻 GitHub
-              </a>
+              <div className="flex flex-col space-y-4">
+                <a
+                  href="https://www.linkedin.com/in/dakota-south/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors"
+                >
+                  <span className="text-xl">💼</span>
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/dakotasouth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#697565] hover:text-[#ECDFCC] transition-colors"
+                >
+                  <span className="text-xl">💻</span>
+                  <span>GitHub</span>
+                </a>
+              </div>
             </div>
           </MotionDiv>
 

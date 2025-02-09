@@ -62,7 +62,7 @@ export default function Hero() {
           </p>
 
           <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="space-y-2 sm:space-y-3">
+            <div className="space-y-2 sm:space-y-3 col-span-1">
               {sections.map((section, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   <span className="text-[#ECDFCC]/70">$</span>
@@ -75,7 +75,7 @@ export default function Hero() {
                 </div>
               ))}
             </div>
-            <div className="space-y-2 sm:space-y-3">
+            <div className="space-y-2 sm:space-y-3 sm:pl-4">
               <div className="flex items-center space-x-2">
                 <span className="text-[#ECDFCC]/70">$</span>
                 <button 

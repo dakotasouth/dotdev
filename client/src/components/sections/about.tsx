@@ -108,22 +108,26 @@ export default function About() {
               className="grid grid-cols-1 sm:grid-cols-3 gap-4"
               variants={fadeIn}
             >
-              <div>
+              <div className="sm:col-span-1">
                 <h3 className="font-['Playfair_Display'] font-bold mb-2">
                   Technical Skills
                 </h3>
-                <ul className="font-['Raleway'] space-y-2 text-[#697565]">
-                  <li>AWS</li>
-                  <li>.NET</li>
-                  <li>Node.js</li>
-                  <li>React</li>
-                  <li>Next.js</li>
-                  <li>MySQL</li>
-                  <li>PostgreSQL</li>
-                  <li>OpenSearch</li>
-                </ul>
+                <div className="grid grid-cols-2 sm:grid-cols-1 gap-4">
+                  <ul className="font-['Raleway'] space-y-2 text-[#697565]">
+                    <li>AWS</li>
+                    <li>.NET</li>
+                    <li>Node.js</li>
+                    <li>React</li>
+                  </ul>
+                  <ul className="font-['Raleway'] space-y-2 text-[#697565]">
+                    <li>Next.js</li>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>OpenSearch</li>
+                  </ul>
+                </div>
               </div>
-              <div>
+              <div className="sm:col-span-1">
                 <h3 className="font-['Playfair_Display'] font-bold mb-2">
                   Languages
                 </h3>
@@ -133,7 +137,7 @@ export default function About() {
                   <li>TypeScript</li>
                 </ul>
               </div>
-              <div>
+              <div className="sm:col-span-1">
                 <h3 className="font-['Playfair_Display'] font-bold mb-2">
                   Experience
                 </h3>

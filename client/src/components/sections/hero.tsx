@@ -72,7 +72,7 @@ export default function Hero() {
                   <span className="text-[#ECDFCC]/70">$</span>
                   <a 
                     href={section.path}
-                    className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-2 sm:px-6 py-1.5 sm:py-2 text-[#ECDFCC] font-mono text-sm sm:text-base w-32 sm:w-48"
+                    className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-2 sm:px-6 py-1.5 sm:py-2 text-[#ECDFCC] font-mono text-sm sm:text-base w-40 sm:w-52 truncate"
                   >
                     {section.name}
                   </a>
@@ -84,7 +84,7 @@ export default function Hero() {
                 <span className="text-[#ECDFCC]/70">$</span>
                 <button 
                   onClick={handleResumeDownload}
-                  className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-2 sm:px-6 py-1.5 sm:py-2 text-[#ECDFCC] font-mono text-sm sm:text-base w-32 sm:w-48 text-left"
+                  className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-2 sm:px-6 py-1.5 sm:py-2 text-[#ECDFCC] font-mono text-sm sm:text-base w-40 sm:w-52 truncate text-left"
                 >
                   ./resume.pdf
                 </button>

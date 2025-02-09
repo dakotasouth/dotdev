@@ -24,7 +24,8 @@ const SECTION_CONTENT = {
       "role": "Software Engineer",
       "skills": ["cloud_infra", "data_engineering", "backend_dev", "realtime_systems"],
       "status": "building/accelerating",
-      "location": "localhost"
+      "location": "localhost",
+      "experience_seconds": ${Math.floor((new Date().getTime() - new Date('2022-05-28T09:00:00').getTime()) / 1000)}
     }
   `,
   "about.txt": `

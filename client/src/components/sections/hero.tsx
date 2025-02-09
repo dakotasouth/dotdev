@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MotionDiv } from "../ui/motion";
+import { useExperienceTimer } from "@/hooks/useExperienceTimer";
 
 const TypewriterText = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState("");
@@ -29,6 +30,8 @@ export default function Hero() {
     { name: "./contact.md", path: "#contact" }
   ];
 
+  const experienceSeconds = useExperienceTimer();
+
   const handleResumeDownload = () => {
     window.location.href = '/api/resume';
   };
@@ -57,7 +60,8 @@ export default function Hero() {
             &nbsp;&nbsp;"role": "Software Engineer",<br/>
             &nbsp;&nbsp;"skills": ["cloud_infra", "data_engineering", "backend_dev", "realtime_systems"],<br/>
             &nbsp;&nbsp;"status": "building/accelerating",<br/>
-            &nbsp;&nbsp;"location": "localhost"<br/>
+            &nbsp;&nbsp;"location": "localhost",<br/>
+            &nbsp;&nbsp;"experience_seconds": {experienceSeconds}<br/>
             {`}`}
           </p>
 

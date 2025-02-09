@@ -33,12 +33,16 @@ export default function About() {
               className="font-['Raleway'] text-lg leading-relaxed"
               variants={fadeIn}
             >
-              I'm a passionate software engineer learning how to build the future. 
-              With expertise in web applications, cloud infrastructure, and data engineering,
-              I'm driven to build innovative solutions that make a positive impact.
+              I'm a passionate software engineer learning how to build the
+              future. With expertise in web applications, cloud infrastructure,
+              and data engineering, I'm driven to build innovative solutions
+              that make a positive impact.
             </MotionParagraph>
 
-            <MotionDiv variants={fadeIn} className="flex flex-col space-y-4 relative z-10">
+            <MotionDiv
+              variants={fadeIn}
+              className="flex flex-col space-y-4 relative z-10"
+            >
               <div className="flex items-center gap-4">
                 <a
                   href="https://x.com/dakotasouth"
@@ -46,17 +50,21 @@ export default function About() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center p-3 bg-[#ECDFCC]/10 hover:bg-[#ECDFCC]/20 rounded-lg transition-colors"
                 >
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  <svg
+                    className="w-6 h-6"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
                 <a
-                  href="https://x.com/dakotasouth"
+                  href="https://x.com/dakotasouthhh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#ECDFCC] hover:text-[#ECDFCC]/70 transition-colors"
                 >
-                  @dakotasouth
+                  @dakotasouthhh
                 </a>
               </div>
 

@@ -94,6 +94,18 @@ const SECTION_CONTENT = {
   `
 };
 
+const formatOutput = (output: string) => {
+  if (output.trim().startsWith("{") || output.trim().startsWith("[")) {
+    try {
+      const parsed = JSON.parse(output);
+      return JSON.stringify(parsed, null, 2);
+    } catch {
+      return output;
+    }
+  }
+  return output;
+};
+
 export default function Terminal() {
   const [commands, setCommands] = useState<Command[]>([]);
   const [currentInput, setCurrentInput] = useState("");
@@ -135,13 +147,12 @@ Available commands:
         }
         const target = args[1].toLowerCase();
 
-        // Check if target is a file
         if (target.includes('.')) {
           output = `cd: not a directory: ${target}`;
           break;
         }
 
-        const path = Object.entries(SECTIONS).find(([, name]) => 
+        const path = Object.entries(SECTIONS).find(([, name]) =>
           name.toLowerCase().replace(/\.(md|txt|json)$/, '') === target
         )?.[0];
 
@@ -185,7 +196,7 @@ Available commands:
         return;
 
       case "pwd":
-        const currentSection = Object.entries(SECTIONS).find(([path]) => 
+        const currentSection = Object.entries(SECTIONS).find(([path]) =>
           path === window.location.pathname
         )?.[1] || "README.md";
         output = currentSection;
@@ -214,7 +225,9 @@ Available commands:
               <span className="ml-2 text-sm sm:text-base">{cmd.command}</span>
             </div>
             {cmd.output && (
-              <pre className="mt-1 whitespace-pre-wrap text-xs sm:text-sm overflow-x-auto">{cmd.output}</pre>
+              <pre className="mt-1 whitespace-pre-wrap text-xs sm:text-sm overflow-x-auto font-mono">
+                {formatOutput(cmd.output)}
+              </pre>
             )}
           </div>
         ))}

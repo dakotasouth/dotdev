@@ -61,26 +61,26 @@ export default function Hero() {
             {`}`}
           </p>
 
-          <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="space-y-2 sm:space-y-3 col-span-1">
+          <div className="pt-4 grid grid-cols-2 gap-2 sm:gap-4">
+            <div className="space-y-2 sm:space-y-3">
               {sections.map((section, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   <span className="text-[#ECDFCC]/70">$</span>
                   <a 
                     href={section.path}
-                    className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-3 sm:px-6 py-1.5 sm:py-2 text-[#ECDFCC] font-mono text-sm sm:text-base w-36 sm:w-48"
+                    className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-2 sm:px-6 py-1.5 sm:py-2 text-[#ECDFCC] font-mono text-sm sm:text-base w-32 sm:w-48"
                   >
                     {section.name}
                   </a>
                 </div>
               ))}
             </div>
-            <div className="space-y-2 sm:space-y-3 sm:pl-4">
+            <div className="space-y-2 sm:space-y-3 pl-2 sm:pl-4">
               <div className="flex items-center space-x-2">
                 <span className="text-[#ECDFCC]/70">$</span>
                 <button 
                   onClick={handleResumeDownload}
-                  className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-3 sm:px-6 py-1.5 sm:py-2 text-[#ECDFCC] font-mono text-sm sm:text-base w-36 sm:w-48 text-left"
+                  className="inline-block bg-[#ECDFCC]/10 border border-[#ECDFCC]/30 hover:bg-[#ECDFCC]/20 transition-colors px-2 sm:px-6 py-1.5 sm:py-2 text-[#ECDFCC] font-mono text-sm sm:text-base w-32 sm:w-48 text-left"
                 >
                   ./resume.pdf
                 </button>

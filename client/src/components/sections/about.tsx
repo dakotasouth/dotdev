@@ -24,7 +24,7 @@ export default function About() {
           className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-12"
           variants={fadeIn}
         >
-          About Me
+          <span className="text-[#ECDFCC]">&gt; </span>About Me
         </MotionHeading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

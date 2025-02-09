@@ -61,7 +61,7 @@ export default function Hero() {
             &nbsp;&nbsp;"skills": ["cloud_infra", "data_engineering", "backend_dev", "realtime_systems"],<br/>
             &nbsp;&nbsp;"status": "building/accelerating",<br/>
             &nbsp;&nbsp;"location": "localhost",<br/>
-            &nbsp;&nbsp;"experience_seconds": {experienceSeconds}<br/>
+            &nbsp;&nbsp;"experience": {experienceSeconds}<br/>
             {`}`}
           </p>
 

@@ -56,7 +56,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <MotionDiv variants={fadeIn} className="space-y-6 relative z-10">
-            <p className="font-['Raleway'] text-lg">
+            <p className="text-lg">
               Let's work together! Feel free to reach out for collaborations or
               just a friendly hello.
             </p>

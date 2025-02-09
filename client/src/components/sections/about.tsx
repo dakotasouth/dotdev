@@ -114,11 +114,11 @@ export default function About() {
               variants={fadeIn}
             >
               <div className="sm:col-span-1">
-                <h3 className="font-['Playfair_Display'] font-bold mb-2">
+                <h3 className="font-bold mb-2">
                   Technical Skills
                 </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-1 gap-4">
-                  <ul className="font-['Raleway'] space-y-2 text-[#697565]">
+                  <ul className="space-y-2 text-[#697565]">
                     <li>AWS</li>
                     <li>.NET</li>
                     <li>Node.js</li>
@@ -133,20 +133,20 @@ export default function About() {
                 </div>
               </div>
               <div className="sm:col-span-1">
-                <h3 className="font-['Playfair_Display'] font-bold mb-2">
+                <h3 className="font-bold mb-2">
                   Languages
                 </h3>
-                <ul className="font-['Raleway'] space-y-2 text-[#697565]">
+                <ul className="space-y-2 text-[#697565]">
                   <li>C#</li>
                   <li>Python</li>
                   <li>TypeScript</li>
                 </ul>
               </div>
               <div className="sm:col-span-1">
-                <h3 className="font-['Playfair_Display'] font-bold mb-2">
+                <h3 className="font-bold mb-2">
                   Experience
                 </h3>
-                <ul className="font-['Raleway'] space-y-2 text-[#697565]">
+                <ul className="space-y-2 text-[#697565]">
                   <li>Data Pipelines</li>
                   <li>Jobs/Automations</li>
                   <li>Web Applications</li>

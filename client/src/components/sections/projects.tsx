@@ -59,10 +59,10 @@ export default function Projects() {
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
                   <div className="h-full flex flex-col justify-end p-6">
-                    <h3 className="font-['Playfair_Display'] text-xl font-bold mb-2">
+                    <h3 className="text-xl font-bold mb-2">
                       {project.title}
                     </h3>
-                    <p className="font-['Raleway'] text-sm text-[#ECDFCC]/80 mb-4">
+                    <p className="text-sm text-[#ECDFCC]/80 mb-4">
                       {project.description}
                     </p>
                     <div className="flex gap-2">

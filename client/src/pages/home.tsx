@@ -5,6 +5,7 @@ import Projects from "@/components/sections/projects";
 import Contact from "@/components/sections/contact";
 import Terminal from "@/components/terminal/Terminal";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Terminal as TerminalIcon, Monitor } from "lucide-react";
 
 export default function Home() {
@@ -20,18 +21,25 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-[#ECDFCC] font-mono relative">
-      <Button
-        variant="outline"
-        size="icon"
-        className="fixed top-4 right-4 z-50 bg-black/50 backdrop-blur-sm border-[#ECDFCC] hover:bg-[#ECDFCC]/20"
-        onClick={() => setIsTerminalMode(!isTerminalMode)}
-      >
-        {isTerminalMode ? (
-          <Monitor className="h-4 w-4" />
-        ) : (
-          <TerminalIcon className="h-4 w-4" />
-        )}
-      </Button>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button
+            variant="outline"
+            size="icon"
+            className="fixed top-4 right-4 z-50 bg-black/50 backdrop-blur-sm border-[#ECDFCC] hover:bg-[#ECDFCC]/20"
+            onClick={() => setIsTerminalMode(!isTerminalMode)}
+          >
+            {isTerminalMode ? (
+              <Monitor className="h-4 w-4" />
+            ) : (
+              <TerminalIcon className="h-4 w-4" />
+            )}
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{isTerminalMode ? 'Switch to normal view' : 'Try terminal mode!'}</p>
+        </TooltipContent>
+      </Tooltip>
 
       {isTerminalMode ? (
         <Terminal />

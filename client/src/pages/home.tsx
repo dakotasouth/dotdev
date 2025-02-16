@@ -5,7 +5,7 @@ import Projects from "@/components/sections/projects";
 import Contact from "@/components/sections/contact";
 import Terminal from "@/components/terminal/Terminal";
 import { Button } from "@/components/ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip";
 import { Terminal as TerminalIcon, Monitor } from "lucide-react";
 
 export default function Home() {
@@ -21,7 +21,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-[#ECDFCC] font-mono relative">
-      <Tooltip>
+      <TooltipProvider>
+        <Tooltip>
         <TooltipTrigger asChild>
           <Button
             variant="outline"
@@ -40,6 +41,7 @@ export default function Home() {
           <p>{isTerminalMode ? 'Switch to normal view' : 'Try terminal mode!'}</p>
         </TooltipContent>
       </Tooltip>
+      </TooltipProvider>
 
       {isTerminalMode ? (
         <Terminal />

@@ -27,7 +27,7 @@ export default function Home() {
           <Button
             variant="outline"
             size="icon"
-            className="fixed top-4 right-4 z-50 bg-black/50 backdrop-blur-sm border-[#ECDFCC] hover:bg-[#ECDFCC]/20 pulse"
+            className={`fixed top-4 right-4 z-50 bg-black/50 backdrop-blur-sm border-[#ECDFCC] hover:bg-[#ECDFCC]/20 ${!isTerminalMode ? 'pulse' : ''}`}
             onClick={() => setIsTerminalMode(!isTerminalMode)}
           >
             {isTerminalMode ? (
